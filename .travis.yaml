@@ -16,10 +16,10 @@ before_install:
     - gcloud config set compute/zone us-central1-a
     - gcloud container clusters get-credentials multi-cluster 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker build -t hemanthtm2/react-test -f ./client/Dockerfile.dev ./client 
+    - docker build -t hemanth/react-test -f ./client/Dockerfile.dev ./client 
 
 script:
-    - docker run hemanthtm2/react-test npm test -- --coverage 
+    - docker run hemanth/react-test npm test -- --coverage 
 
 deploy:
     provider: script 
