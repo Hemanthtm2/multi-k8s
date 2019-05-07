@@ -1,8 +1,8 @@
 docker build -t hemanthtm2/multi-client:latest -t hemanthtm2/multi-client:$SHA -f ./client/Dockerfile ./client 
 
-docker build -t hemanthtm2/multi-server:latest -t hemanthtm2/multi-server:$SHA ./server/Dockerfile ./server 
+docker build -t hemanthtm2/multi-server:latest -t hemanthtm2/multi-server:$SHA -f ./server/Dockerfile ./server 
 
-docker build -t hemanthtm2/multi-worker:latest -t hemanthtm2/multi-worker:$SHA  ./worker/Dockerfile ./worker
+docker build -t hemanthtm2/multi-worker:latest -t hemanthtm2/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push hemanthtm2/multi-client:latest
 
